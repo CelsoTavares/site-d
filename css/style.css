@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+:root{
+  --blue-top: rgb(0, 102, 255);
+  --light-black: rgba(0,0,0,0.5);
+  --light-white: rgba(255, 255, 255, 0.932);
+}
+body {
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+  color: var(--blue-top);
+  transition: all 0.5s;
+}
+li{
+  list-style: none;
+}
+#home {
+  color: var(--light-white);
+  background: var(--blue-top);
+  border-radius: 5px;
+}
+a:hover{
+  color: var(--light-white);
+  background: var(--blue-top);
+  border-radius: 5px;
+}
+#logo{
+  font-size: 1rem;
+  font-weight: bold;
+}
+#header{
+  display:flex;
+  padding: 1rem;
+  align-items: center;
+  height: 70px;
+  justify-content: space-between;
+  background: var(--light-gray);  
+}
+#menu{
+  display: flex;
+  gap: 0.5rem;
+}
+#menu a{
+  display: block;
+  padding: .5rem;
+}
+#btn-mobile{
+  display: none;
+}
+.section-1 {
+  background-image: url('../img/musculacao.jpg');
+  width: 100vw; 
+  height: calc(100vh - 70px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  display: flex;
+}
+.div-section-1 {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.13);
+  padding: 5%;
+}
+.div-section-1 h1 {
+  color: var(--light-white);
+  font-size: min(4.5vw, 64px);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+} 
+.div-section-1 h2 {
+  color: var(--light-white);
+  font-size: min(4vw, 64px);
+  margin-bottom: 10px;
+}
+.div-section-1 p {
+  color: var(--light-white);
+  min-width: 300px;
+  max-width: 400px;
+  font-size: 1.2rem;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+.section-2 {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient( rgb(27, 106, 197), rgba(0, 0, 255, 0.849));
+  display: flex;
+  padding: 5%;
+}
+.div-foto {
+ width: 33%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+}
+.div1 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.div2 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+ align-items: center;
+}
+.combat1 {
+  background-image: url('../img/combat1.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height:50%;
+}
+.combat2 {
+  background-image: url('../img/combat2.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height:50%;
+}
+.douglas {
+  width: 100%;
+  height:50%;
+  color: var(--light-white);
+  text-align: center;
+}
+.douglas h3{
+  font-size: min(4vw, 64px);
+  padding: 10px;
+}
+.douglas p {
+  padding: 20px;
+  font-size: 1.2rem;
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+@media(max-width:1300px){
+.section-2{
+  flex-direction: column;
+  align-items: center;
+}
+.douglas p {
+  padding: 0;
+}
+.douglas {
+  height: 100%;
+}
+.combat1 {
+  height: 100%;
+}
+.combat2 {
+  height: 100%;
+}
+.div-foto {
+  width: 80%;
+}
+.div2 {
+  width: 80%;
+}
+.div1 {
+  width:80%;
+}
+}
+footer {
+  width: 100%;
+  height: 200px;
+  padding: 5%;
+  background:rgba(4, 4, 204, 0.945);
+  border-top: 3px solid white;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+@media(max-width:600px ){
+#btn-mobile{
+  display: block;
+}
+#menu{
+  visibility: hidden;
+  position: absolute;
+  display: block;
+  width: 100%;
+  top:70px;
+  right: 0;
+  background: var(--light-gray);
+  height: 0;
+  overflow-y: hidden;
+  z-index: 1;
+  transition: .6s;
+}
+#nav.active #menu{
+  visibility: visible;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+#menu a{
+  padding: 1rem 0;
+  margin: 0 1rem;
+  border-bottom: 2px solid var(--light-black);
+}
+#btn-mobile{
+  display: flex;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: .5rem 1rem; 
+  gap: .5rem;
+}
+#hamburger{
+  color: var(--blue-top);
+  display: block;
+  border-top: 2px solid;
+  width: 20px;
+  height: 20px;
+}
+#hamburger::after, #hamburger::before{
+  content: '';
+  display: block;
+  width: 20px;
+  background: currentColor;
+  height: 2px;
+  margin-top: 5px;
+  transition: .3s;
+}
+#nav.active #hamburger{
+  border-top: none;
+}
+#nav.active #hamburger::after{
+  position: absolute;
+  transform: rotate(-135deg);
+} 
+#nav.active #hamburger::before{
+  position: absolute;
+  transform: rotate(135deg);
+}
+.div-section-1 p{
+  font-size: 0.8rem;
+}
+}
