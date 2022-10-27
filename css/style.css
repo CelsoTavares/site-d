@@ -1,20 +1,4 @@
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-/* ::-webkit-scrollbar-track {
-  background: #4d0000;
-} */
-
-::-webkit-scrollbar-thumb {
-  background: rgba(6, 12, 99);
-  border: 2px solid  rgb(0, 102, 255);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #05517e;
-}
 * {
   margin: 0;
   padding: 0;
@@ -145,7 +129,7 @@ a{
   margin-bottom: 10px;
   font-size: 1.2rem;
   text-shadow: 1px 1px 5px white;
-  padding: 1%;
+  padding: 2%;
   overflow-y: hidden;
 }
 .text-servicos {
