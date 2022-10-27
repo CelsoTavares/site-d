@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://kit.fontawesome.com/2ed813c551.js" crossorigin="anonymous"></script>
   <script defer src="js/script.js"></script>
   <title>Personal Douglas Rodrigues</title>
 </head>
@@ -21,29 +23,30 @@
     </button>
     
   <ul id="menu" role="menu">
-    <li ><a id="home" href="">Home</a></li>
-    <li><a href="">Sobre</a></li>
-    <li><a href="">Serviços</a></li>
-    <li><a href="">Contato</a></li>
+    <li ><a class="home" href="#home">Home</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#foto">Fotos</a></li>
+    <li><a href="#contato">Contato</a></li>
   </ul>
 </nav>
   </header>
  
   <section class="section-1">
   <div class="div-section-1">
-    <h1> Pratique atividade física</h1>
-    <h2>Tenha qualidade de vida</h2>
-    <p>A prática regular de atividade física é capaz de melhorar a circulação sanguínea, fortalecer o sistema imunológico, ajudar a emagrecer, diminuir o risco de doenças cardíacas e fortalecer os ossos.</p>
+    <h1 data-aos="fade-down"> Pratique atividade física</h1>
+    <h2 data-aos="fade-down">Tenha qualidade de vida</h2>
+    <p data-aos="fade-down">A prática regular de atividade física é capaz de melhorar a circulação sanguínea, fortalecer o sistema imunológico, ajudar a emagrecer, diminuir o risco de doenças cardíacas e fortalecer os ossos.</p>
   </div>
 </section>
 
-<section class="section-4">
-  <h2>Sobre</h2>
+<section id='sobre' class="section-4">
+  <h2 data-aos="fade-right">Sobre</h2>
   <div class="container-sobre">
-  <div class="div-img">
+  <div data-aos="fade-right" class="div-img">
     <!-- image  -->
   </div>
-   <div class="text-sobre">
+   <div data-aos="fade-right" class="text-sobre">
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, eius placeat! Cupiditate, rem et. Repellendus autem quibusdam eius? Eaque dolores suscipit non aliquid eligendi sit nesciunt ullam quos eos rerum. Lorem ipsum dolor sit amet,  </p>
    </div>
   </div>
@@ -52,25 +55,20 @@
   </div>
 </section>
 
-
-
-
-
-
-<section class="section-2">
+<section id='servicos' class="section-2">
   
-  <h2 id="text2">Vamos Vencer Obstáculos</h2>
+  <h2 data-aos="fade-left" id="text2">Vamos Vencer Obstáculos</h2>
   
   <div class="div-section-2">
 
-    <div class="text-idoso"> 
+    <div data-aos="fade-left" class="text-idoso"> 
       <h2>Para praticar atividade, não tem idade.</h2>
       <div class="idoso">
         <!-- image -->
       </div> <!-- idoso -->
     </div>  <!-- text-idoso -->
     
-    <div class="text-servicos">
+    <div data-aos="fade-left" class="text-servicos">
       <h2>Serviços</h2>
         <div class="servicos">
           <ul>
@@ -84,7 +82,7 @@
         </div> <!-- servicos -->
     </div>   <!-- text-servicos -->
 
-    <div class="text-crianca">
+    <div data-aos="fade-left" class="text-crianca">
       <h2>Para praticar atividade, não tem obstáculo.</h2>
         <div class="crianca">
           <!-- image -->
@@ -95,32 +93,44 @@
 
 </section>  <!-- section-2 -->
 
-<section class="section-3">
-  <div class="div1">
+
+<section id="foto" class="section-3">
+  <h2 data-aos="fade-up" >Fotos</h2>
+
+  <div data-aos="fade-up" class="container-fotos">
+  
     <div class="combat1">
-
+        <!-- images -->
     </div>
-  </div>
   
-    <div class="div-foto">
-        <div class="douglas">
-  
-        </div>
+    <div class="douglas">
+            <!-- images -->
     </div>
-   
-  
-  
-  <div class="div2">
+    
     <div class="combat2">
-
+        <!-- images -->
     </div>
+  
   </div>
 
 </section> 
-<footer>
+  
+<footer id="contato">
+
+<div class="div-contato">
  <p>Contato: 99 9999-99 99</p><br>
  <p>Alguns Direitos Reservador</p><br>
  <p>Desenvolvido © Celso Tavares</p>
+</div>
+
+<div class="div-form">
+  <form>
+
+  </form>
+</div>
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
+  
+
