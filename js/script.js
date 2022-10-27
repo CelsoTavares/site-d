@@ -1,3 +1,5 @@
+
+
 const btnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(event){
@@ -18,3 +20,9 @@ function toggleMenu(event){
 }
 btnMobile.addEventListener("click", toggleMenu)
 btnMobile.addEventListener("touchstart", toggleMenu)
+
+AOS.init({easing: 'ease-in-out',
+              duration: 600,
+              offset: 100,
+      
+    });
