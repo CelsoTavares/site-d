@@ -12,11 +12,6 @@
 body {
   overflow-x: hidden;
 }
-a{
-  text-decoration: none;
-  color: var(--blue-top);
-  transition: all 0.5s;
-}
 li{
   list-style: none;
 }
@@ -46,9 +41,14 @@ a:hover{
   display: flex;
   gap: 0.5rem;
 }
+a{
+  color: var(--blue-top);
+}
 #menu a{
   display: block;
   padding: .5rem;
+  text-decoration: none;
+  transition: all 0.5s;
 }
 #btn-mobile{
   display: none;
@@ -92,29 +92,107 @@ a:hover{
   text-align: justify;
 }
 .section-2 {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.div-section-2 {
+  width: 100%;
+  height: 80%;
+  background: var(--light-white);
+  display: flex;
+  padding: 5%;
+  position: absolute;
+}
+#text2 {
+  text-align: center;
+  color: var(--blue-top);
+  font-size: min(4.5vw, 64px);
+  text-transform: uppercase;
+}
+.section-2 h2 {
+  color: blue;
+  margin-bottom: 10px ;
+  text-shadow: 1px 1px 5px white;
+  padding: 3%;
+}
+.section-2 p {
+  color: var(--light-white);
+  letter-spacing: 1px;
+  line-height: 30px;
+  padding: 3%;
+}
+.sobre {
+  width: 30%;
+  height: 60%;
+  margin: 5px; 
+  background: var(--blue-top);
+  border: 3px solid rgba(128, 128, 128, 0.486);
+  transition: all 1s;
+  cursor: pointer;
+ }
+.idoso {
+  width: 30%;
+  height: 60%;
+  margin: 5px;
+  align-self: center;
+  background-image: url('../img/idoso.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid rgba(128, 128, 128, 0.486);
+  transition: all 1s;
+  cursor: pointer;
+ }
+.crianca {
+  width: 30%;
+  height: 60%;
+  margin: 5px;
+  align-self: flex-end;
+  background-image: url('../img/crianca.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid rgba(128, 128, 128, 0.486);
+  transition: all 1s;
+  cursor: pointer;
+ }
+.sobre:hover {
+  border: 3px solid black;
+}
+.idoso:hover {
+  border: 3px solid black;
+}
+.crianca:hover {
+  border: 3px solid black;
+}
+.section-3 {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient( rgb(27, 106, 197), rgba(0, 0, 255, 0.849));
+  background: var(--blue-top);
   display: flex;
   padding: 5%;
 }
 .div-foto {
- width: 33%;
+ width: 30%;
  height: 100%;
  display: flex;
  align-items: center;
+ margin: 5px;
 }
 .div1 {
   width: 33%;
   height: 100%;
   display: flex;
   align-items: center;
+  margin: 5px;
 }
 .div2 {
   width: 33%;
   height: 100%;
   display: flex;
- align-items: center;
+  align-items: center;
+  margin: 5px;
 }
 .combat1 {
   background-image: url('../img/combat1.png');
@@ -122,6 +200,9 @@ a:hover{
   background-size: cover;
   width: 100%;
   height:50%;
+  border: 3px solid var(--light-white);
+  transition: all 1s;
+  cursor: pointer;
 }
 .combat2 {
   background-image: url('../img/combat2.png');
@@ -129,16 +210,35 @@ a:hover{
   background-size: cover;
   width: 100%;
   height:50%;
+  border: 3px solid var(--light-white);
+  transition: all 1s;
+  cursor: pointer;
 }
 .douglas {
+  background-image: url('../img/douglas.png');
+  background-position: center;
+  background-size: cover;
   width: 100%;
   height:50%;
   color: var(--light-white);
   text-align: center;
+  border: 3px solid var(--light-white);
+  transition: all 1s;
+  cursor: pointer;
 }
-.douglas h3{
+.douglas:hover {
+  border: 3px solid blue;
+}
+.combat1:hover {
+  border: 3px solid blue;
+}
+.combat2:hover {
+  border: 3px solid blue;
+}
+
+.douglas h3 {
   font-size: min(4vw, 64px);
-  padding: 10px;
+  padding: 6px;
 }
 .douglas p {
   padding: 20px;
@@ -147,8 +247,28 @@ a:hover{
   letter-spacing: 1px;
   line-height: 30px;
 }
-@media(max-width:1300px){
-.section-2{
+@media(max-width:900px){
+.div-section-2 {
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+}
+.sobre {
+  align-self: center;
+  height: 100%;
+  width: 80%;
+}
+.crianca {
+  align-self: center;
+  height: 100%;
+  width: 80%;
+}
+.idoso {
+  align-self: center;
+  height: 100%;
+  width: 80%;
+}
+.section-3{
   flex-direction: column;
   align-items: center;
 }
@@ -183,10 +303,6 @@ footer {
   color: white;
   text-align: center;
 }
-
-
-
-
 @media(max-width:600px ){
 #btn-mobile{
   display: block;
@@ -210,9 +326,11 @@ footer {
   overflow-y: auto;
 }
 #menu a{
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   margin: 0 1rem;
-  border-bottom: 2px solid var(--light-black);
+  border-bottom: 2px solid var(--light-white
+  );
+  background: rgb(44, 40, 40);
 }
 #btn-mobile{
   display: flex;
@@ -224,7 +342,7 @@ footer {
   gap: .5rem;
 }
 #hamburger{
-  color: var(--blue-top);
+  color: black;
   display: block;
   border-top: 2px solid;
   width: 20px;
