@@ -36,7 +36,7 @@ li{
   background: var(--blue-top);
   border-radius: 5px;
 }
-a:hover{
+#menu a:hover{
   color: var(--light-white);
   background: var(--blue-top);
   border-radius: 5px;
@@ -324,11 +324,13 @@ footer h5 {
   display: flex;
   justify-content: space-around;
   gap: 5px 5px;
+  padding: 5%;
 }
 i {
   font-size: 2rem;
-  margin-bottom: 5px;
-  cursor: pointer;
+  color: var(--light-white);
+  margin-bottom: 30px;
+
 }
 .div-contato {
   width: 50%;
