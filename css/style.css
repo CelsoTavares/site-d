@@ -116,6 +116,7 @@ a{
   height: 60%;
   display: flex;
   margin: 0 auto;
+  background: white;
   justify-content: space-between;
 }
 #text2 {
